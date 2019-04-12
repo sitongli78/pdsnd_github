@@ -82,7 +82,6 @@ def load_data(city, month, day):
     df['travel_time'] = pd.to_datetime(df['End Time']) - pd.to_datetime(df['Start Time'])
 
     if month != "all":
-        # df = df[df.start_time.str.startswith(month_dict[month])]
         df = df[df.month == month]
 
     if day != 'all':
