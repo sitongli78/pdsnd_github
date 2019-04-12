@@ -90,6 +90,7 @@ def load_data(city, month, day):
     return df
 
 def most_common(ps):
+    # For a pandas series object, return the index and count of the most common index
     value_count = ps.value_counts()
     return value_count.idxmax(), value_count.max()
 
